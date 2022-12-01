@@ -1,2 +1,5 @@
-# advent-of-code-2022
- My solutions to the puzzles of Advent of Code 2022
+# 🎄 Advent of code 2022 (Typescript & Node.js) 🎄
+
+You can find the code solving these puzzles in the `src` folders in their respective folders (for example `src/day1`).
+
+Run `npm run start` to check the results to the puzzles.
