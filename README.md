@@ -2,4 +2,4 @@
 
 You can find the code solving these puzzles in the `src` folders in their respective folders (for example `src/day1`).
 
-Run `npm run start` to check the results to the puzzles.
+Run `npm run start` to check the results of the puzzles.
