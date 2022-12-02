@@ -24,6 +24,6 @@ export async function day1(): Promise<void> {
         .reduce((a, b) => a + b);
 
     console.log(`Day 1: 
-     Part 1) The elf with the most calories is carrying ${elfWithMostCalories} calories.
-     Part 2) The top three elves are carrying ${sumTopThreeCalories} calories. Thicc bois!`);
+    Part 1) The elf with the most calories is carrying ${elfWithMostCalories} calories.
+    Part 2) The top three elves are carrying ${sumTopThreeCalories} calories. Thicc bois! \n`);
 }
