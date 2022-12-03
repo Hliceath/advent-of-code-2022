@@ -1,28 +1,5 @@
-import fs from 'node:fs';
-import readline from 'node:readline';
-
-interface ultimateStrategyGuide {
-    opponent: {
-        A: number,
-        B: number,
-        C: number
-    },
-    you: {
-        X: number,
-        Y: number,
-        Z: number,
-    },
-    winMoves: {
-        A: string,
-        B: string,
-        C: string,
-    },
-    loseMoves: {
-        A: string,
-        B: string,
-        C: string,
-    }
-}
+import { readFile } from '../utils/utils';
+import { ultimateStrategyGuide } from '../models/day2.models';
 
 const guide: ultimateStrategyGuide = {
     'opponent': { 'A': 1, 'B': 2, 'C': 3 },
@@ -34,16 +11,9 @@ const guide: ultimateStrategyGuide = {
 export async function day2(): Promise<void> {
     let totalScore = 0;
     let ultimateTotalScore = 0;
-    const fileStream = fs.createReadStream('src/day2/input.txt');
-    const rl = readline.createInterface({
-        input: fileStream,
-        crlfDelay: Infinity,
-    });
+    const rl = readFile('src/day2/input.txt');
 
     for await (const line of rl) {
-        if (line === "") {
-            continue;
-        }
         const [opponentMove, yourMove] = line.split(' ');
         const opponentScore = guide.opponent[opponentMove as keyof ultimateStrategyGuide['opponent']];
         const yourScore = guide.you[yourMove as keyof ultimateStrategyGuide['you']]

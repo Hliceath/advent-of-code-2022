@@ -1,13 +1,8 @@
-import fs from 'node:fs';
-import readline from 'node:readline';
+import { readFile } from '../utils/utils';
 
 export async function day1(): Promise<void> {
     const elves: number[] = [];
-    const fileStream = fs.createReadStream('src/day1/input.txt');
-    const rl = readline.createInterface({
-        input: fileStream,
-        crlfDelay: Infinity,
-    });
+    const rl = readFile('src/day1/input.txt');
 
     let elfId = 0;
     for await (const line of rl) {
