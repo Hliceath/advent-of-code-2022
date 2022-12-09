@@ -59,6 +59,6 @@ export async function day5(): Promise<void> {
     Object.keys(part2Stacks).forEach((stack) => part2Answer += part2Stacks[Number(stack)].pop());
 
     console.log(`Day 5:
-    Part 1) CrateMover 9000 stacks are: ${part1Answer}. 
-    Part 2) CrateMover 9001 stacks are: ${part2Answer} \n`);
+    Part 1) [CrateMover 9000] Top crates are: ${part1Answer}. 
+    Part 2) [CrateMover 9001] Top crates are: ${part2Answer}. \n`);
 }
